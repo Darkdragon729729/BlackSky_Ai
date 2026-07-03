@@ -1,52 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gemini AI Chat</title>
-
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Sky AI - Secure Chat Workspace</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-
-<h1>🤖 Gemini AI</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="payment.html">Premium</a>
-</nav>
-
+    <div class="header-logo">🌌 Black Sky AI Chat</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="payment.html">Recharge Wallet</a>
+    </nav>
 </header>
 
-<div class="container">
+<main class="container">
+    <!-- Main Chat Workspace Window Container -->
+    <div class="chat-box" id="chatBox">
+        <div class="bot">
+            Hello! I am Black Sky AI. Your premium session is active. How can I assist your workflow today?
+        </div>
+    </div>
 
-<div class="chat-box" id="chatBox">
+    <!-- User Messaging Input Dashboard Dock -->
+    <div class="input-area">
+        <input type="text" id="message" placeholder="Ask anything, type your message here...">
+        <button id="sendBtn">Send</button>
+    </div>
+</main>
 
-<div class="bot">
-Hello! I'm Gemini AI. How can I help you today?
-</div>
-
-</div>
-
-<div class="input-area">
-
-<input
-type="text"
-id="message"
-placeholder="Type your message...">
-
-<button id="sendBtn">
-Send
-</button>
-
-</div>
-
-</div>
-
-<script src="/src/app.js"></script>
+<!-- 
+  CRITICAL FIX: Changed from '/src/app.js' to 'js/app.js' or dynamic path 
+  matching how your production static build files bundle together.
+-->
+<script src="../src/app.js"></script>
 
 </body>
 </html>
