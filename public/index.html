@@ -1,102 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gemini AI Assistant</title>
-
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Sky AI Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-
-<h1>🤖 Gemini AI</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="chat.html">Chat</a>
-<a href="payment.html">Premium</a>
-</nav>
-
+    <div class="header-logo">🌌 Black Sky AI</div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="chat.html">Chat</a>
+        <a href="payment.html">Recharge Wallet</a>
+    </nav>
 </header>
 
-<main>
-
-<section class="hero">
-
-<h2>Welcome to Gemini AI</h2>
-
-<p>
-Chat with Gemini AI instantly. Recharge your wallet to unlock premium AI usage.
-</p>
-
-<a href="chat.html">
-<button class="chat-btn">Start Chat</button>
-</a>
-
-</section>
-
-<section class="premium">
-
-<h2>⭐ Premium Wallet</h2>
-
-<p>Your Balance</p>
-
-<h1 id="balance">₹0.00</h1>
-
-<div class="amount-buttons">
-
-<button onclick="selectAmount(10)">₹10</button>
-
-<button onclick="selectAmount(30)">₹30</button>
-
-<button onclick="selectAmount(50)">₹50</button>
-
-<button onclick="selectAmount(80)">₹80</button>
-
-<button onclick="selectAmount(100)">₹100</button>
-
-</div>
-
-<input
-type="number"
-id="customAmount"
-placeholder="Enter Custom Amount">
-
-<br><br>
-
-<a href="payment.html">
-<button class="buy-btn">
-Recharge Wallet
-</button>
-</a>
-
-</section>
-
+<main class="container">
+    <section class="hero-card">
+        <h2>Welcome to Black Sky AI</h2>
+        <p>Experience ultra-fast response generation. Unlock full access to your personalized intelligence suite by managing your cloud premium balance.</p>
+        <div class="action-block">
+            <a href="chat.html"><button class="chat-btn">Start Chat</button></a>
+        </div>
+    </section>
 </main>
 
-<footer>
-
-<p>© 2026 Gemini AI. All Rights Reserved.</p>
-
-<a href="about.html">About</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms & Conditions</a> |
-<a href="refund.html">Refund Policy</a> |
-<a href="shipping.html">Shipping Policy</a>
-
+<footer class="app-footer">
+    <div class="footer-brand">© 2026 Black Sky AI. All Rights Reserved.</div>
+    <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="refund.html">Refund Policy</a>
+        <a href="shipping.html">Shipping Policy</a>
+    </div>
 </footer>
-
-<script>
-function selectAmount(amount){
-localStorage.setItem("selectedAmount", amount);
-document.getElementById("customAmount").value = amount;
-}
-</script>
 
 </body>
 </html>
