@@ -1,72 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Wallet</title>
-
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wallet - Black Sky AI</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-
-<h1>⭐ Premium Wallet</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="chat.html">Chat</a>
-</nav>
-
+    <div class="header-logo">💳 Premium Wallet</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="chat.html">Chat</a>
+    </nav>
 </header>
 
-<div class="container">
+<main class="container small-container">
+    <div class="card-wrapper">
+        <div class="wallet-card">
+            <h2>Wallet Balance</h2>
+            <h1 id="balance">₹0.00</h1>
+            <p>Maintain your system balance token pools to prevent service interruption blocks.</p>
+        </div>
 
-<div class="wallet">
+        <div class="amount-card">
+            <h3>Select Top-Up Amount</h3>
+            <div class="amount-buttons">
+                <button onclick="selectAmount(10)">₹10</button>
+                <button onclick="selectAmount(30)">₹30</button>
+                <button onclick="selectAmount(50)">₹50</button>
+                <button onclick="selectAmount(80)">₹80</button>
+                <button onclick="selectAmount(100)">₹100</button>
+            </div>
 
-<h2>Wallet Balance</h2>
+            <div class="input-container">
+                <input type="number" id="customAmount" placeholder="Or enter custom amount">
+            </div>
 
-<h1 id="balance">₹0.00</h1>
-
-<p>Add money to your wallet to use Gemini AI.</p>
-
-</div>
-
-<div class="amount-box">
-
-<h3>Select Amount</h3>
-
-<div class="amount-buttons">
-
-<button onclick="selectAmount(10)">₹10</button>
-
-<button onclick="selectAmount(30)">₹30</button>
-
-<button onclick="selectAmount(50)">₹50</button>
-
-<button onclick="selectAmount(80)">₹80</button>
-
-<button onclick="selectAmount(100)">₹100</button>
-
-</div>
-
-<br>
-
-<input
-type="number"
-id="customAmount"
-placeholder="Enter Custom Amount">
-
-<br><br>
-
-<button id="payBtn">
-Recharge Now
-</button>
-
-</div>
-
-</div>
+            <button id="payBtn" class="action-btn-main">Recharge Now</button>
+        </div>
+    </div>
+</main>
 
 <script>
 let selectedAmount = 0;
@@ -74,12 +49,15 @@ let selectedAmount = 0;
 function selectAmount(amount) {
     selectedAmount = amount;
     document.getElementById("customAmount").value = amount;
+    
+    // Visually toggle active states
+    const buttons = document.querySelectorAll('.amount-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active-btn'));
+    event.target.classList.add('active-btn');
 }
 
 document.getElementById("payBtn").onclick = function () {
-
     const custom = document.getElementById("customAmount").value;
-
     if (custom) {
         selectedAmount = Number(custom);
     }
@@ -89,7 +67,6 @@ document.getElementById("payBtn").onclick = function () {
         return;
     }
 
-    // Razorpay integration will be added later.
     alert("Selected Amount: ₹" + selectedAmount);
 };
 </script>
