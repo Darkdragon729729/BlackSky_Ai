@@ -1,11 +1,11 @@
 [build]
-  publish = "netlify/public"
+  publish = "public"
 
 [functions]
   directory = "netlify/functions"
 
 [dev]
-  publish = "netlify/public"
+  publish = "public"
   functions = "netlify/functions"
   port = 8888
 
