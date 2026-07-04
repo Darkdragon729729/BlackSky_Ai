@@ -1,3 +1,14 @@
+[build]
+  publish = "netlify/public"
+
+[functions]
+  directory = "netlify/functions"
+
+[dev]
+  publish = "netlify/public"
+  functions = "netlify/functions"
+  port = 8888
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
